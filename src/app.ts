@@ -13,5 +13,4 @@ app.get('/', (req: Request, res: Response) => {
   res.send('Hello World!');
 });
 
-console.log("App running on port 3000");
-app.listen(3000);
+export default app;
