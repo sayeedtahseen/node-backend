@@ -17,6 +17,10 @@
   "scripts": {
     "test": "test"
   },
+  "imports": {
+    "#src/*": "./src/*",
+    "#routers/*": "./src/routers/*"
+  },
   "dependencies": {
     "express": "^5.3.0"
   },
