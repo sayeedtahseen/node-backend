@@ -1,0 +1,23 @@
+services:
+  db: 
+    image: postgres:17
+    container_name: psg-db
+    environment:
+      POSTGRES_USER: db-user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: weshallsee
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - local-network-backend
+
+volumes:
+  pgdata:
+    name: node-backend-db
+
+networks:
+  local-network-backend:
+    name: local-network-backend
